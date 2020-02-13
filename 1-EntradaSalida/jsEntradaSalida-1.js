@@ -6,8 +6,8 @@ function mostrar()
 	var apellido="nadie";
 
 	apellido="perez";
-	alert(apellido  );
-	alert("tal cual");
+	
+	
 	//alert(primerpri); si la variable no existe no podemos hacer nada
 	// es un valor literal si esta entre comillas
 	//alert(" tal cual");//literal
