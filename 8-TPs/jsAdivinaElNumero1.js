@@ -13,14 +13,47 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
+	 numeroSecreto=Math.floor(Math.random() * 101)+ 1;// similar al parseInt, si en vez de sumarle 1 sumo 5 empiezo en 5
+	//alert(numeroSecreto );
+	console.log(numeroSecreto);
 	
 
 }
 
 function verificar()
 {
+	var numeroIngresado
+
+	numeroIngresado=document.getElementById('numero').value;
+    numeroIngresado=parseInt(numeroIngresado)
 	
+	if (numeroIngresado==numeroSecreto) 
+	{
+		alert("sos un genio")
+
+		}else
+
+		{
+		
+			if (numeroIngresado>numeroSecreto) 
+
+			{
+				alert("te pasate")
+		
+			}
+
+				else
+
+				{
+					alert("te falto")
+
+
+					}
+
+		}
+
+
+
+
 	
 }
