@@ -14,15 +14,88 @@ var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-	
+	contadorIntentos=0;
 
+	numeroSecreto=Math.floor((Math.random() * 100) + 1);
+	console.log(numeroSecreto);
+	
+	//Genero el número RANDOM entre 1 y 100
 }
 
 function verificar()
 {
 	
-	
+var numeroIngresado;
+
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+
+	if (numeroIngresado==numeroSecreto) 
+	{
+		if (contadorIntentos = 1) 
+		{
+			alert("Usted es un Psíquico");
+		}
+		else 
+		{
+			if (contadorIntentos = 2) 
+			{
+				alert("Excelente percepción");
+			}	
+			else
+			{
+				if (contadorIntentos = 3) 
+				{
+					alert("Esto es suerte");
+				}
+				else
+				{
+					if (contadorIntentos = 4) 
+					{
+						alert("Excelente técnica");
+					}
+					else
+					{
+						if (contadorIntentos = 5) 
+						{
+							alert("Usted está en la media");
+						}
+						else
+						{
+							if (contadorIntentos>5 && contadorIntentos<11) 
+							{
+								alert("Falta técnica");
+							}
+							else 
+							{
+								if (contadorIntentos>10) 
+								{
+									alert("Afortunado en el amor!!");
+								}
+								
+							}
+						}
+					}
+				}
+			}
+		
+		}
+	}
+	else
+		{
+			if (numeroSecreto>numeroIngresado) 
+			{
+				alert("Te faltó");
+			}
+			else
+			{
+				if (numeroSecreto<numeroIngresado) 
+				{
+				alert("Te pasaste");
+				}
+			}
+		}
+
 
 }
+
