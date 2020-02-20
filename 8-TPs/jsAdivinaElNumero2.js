@@ -27,36 +27,38 @@ function verificar()
 	
 var numeroIngresado;
 
+
 	numeroIngresado=document.getElementById('numero').value;
 	numeroIngresado=parseInt(numeroIngresado);
 
+	contadorIntentos= contadorIntentos+1; // SE PONE FUERA DEL IF 
 	if (numeroIngresado==numeroSecreto) 
 	{
-		if (contadorIntentos = 1) 
+		if (contadorIntentos==1)  // SE PONE "==" PORQUE TENGO QUE COMPARAR EL NUMERO DE INTENTOS QUE LLEVO
 		{
 			alert("Usted es un Psíquico");
 		}
 		else 
 		{
-			if (contadorIntentos = 2) 
-			{
+			if (contadorIntentos==2) 
+			{	
 				alert("Excelente percepción");
 			}	
 			else
 			{
-				if (contadorIntentos = 3) 
+				if (contadorIntentos==3) 
 				{
 					alert("Esto es suerte");
 				}
 				else
 				{
-					if (contadorIntentos = 4) 
+					if (contadorIntentos==4) 
 					{
 						alert("Excelente técnica");
 					}
 					else
 					{
-						if (contadorIntentos = 5) 
+						if (contadorIntentos==5) 
 						{
 							alert("Usted está en la media");
 						}
