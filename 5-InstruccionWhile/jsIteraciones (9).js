@@ -9,13 +9,6 @@ function mostrar()
 
 	contador=0;
 	
-	
-	while(respuesta!="no")
-	{
-
-	}
-
-
 
 
 
@@ -24,7 +17,17 @@ function mostrar()
 		contador=contador + 1;
 
 		numeroIngresado=prompt("Ingrese el número");
-		numeroIngresado=parseInt(numeroIngresado);
+		numeroIngresado=parseInt(numeroIngresado);  //VALIDO SIMPRE LUEGO DE PEDIR EL NUMERO
+
+		
+		while(isNaN(numeroIngresado)|| (numeroIngresado<1 || numeroIngresado>10))			// PARA VALIDAR NO UTILIZO IF SINO WHILE, PORQUE SINO NO LO VA HACER ITERADAS VECES.
+		{
+			numeroIngresado=prompt("Error reingrese un número");
+			numeroIngresado=parseInt(numeroIngresado);			// NO SIMEPRE PARA VALIDAR NECESITO PONER EL ||= "ó" PUEDO PONER EL &&="y" DEPENDE EL EJERCICIO.
+		}
+																// DEBO PARSEARLO OTRA VEZ PORQUE SINO LO VA A TOMAR COMO UN NaN.
+
+
 
 		if (contador==1 /*CAMBIO ESTO POR flag */  ) // ES ==1 PORQUE PUSE contador=contador+1 ARRIBA, SINO DBERIA PONER ==0 Y LA PARTE DE CONTADOR ABAJO DEL ULTIMO IF.
 		{
@@ -48,7 +51,7 @@ function mostrar()
 		respuesta=prompt("¿Desea ingresar otro?");
 		
 
-		respuesta=confirm("Desea ingresar otro número") // SI QUIERO UTILIZAR ESTO EL respuesta=prompt NO VA, LO INTERCAMBIO POR ESTE
+		//respuesta=confirm("Desea ingresar otro número") // SI QUIERO UTILIZAR ESTO EL respuesta=prompt NO VA, LO INTERCAMBIO POR ESTE
 		
 		/*respuesta=respuesta.toLowerCase(); // CON ESTO LO CONVIERTO EN MINUSCULA, ENTONCES SI PONGO SI MAYUSCULA LO TRANSFORMA*/
 
