@@ -12,24 +12,22 @@ function CalcularPrecio ()
 {
  	var cantlamparitas;
  	var descuento;
- 	var preciosindescuento;
+ 	var precioBruto;
  	var Valorlampara;
  	var preciofinal;
  	var marca;
  	
+ 	
 
 	Valorlampara=35;
 	
-
-	preciosindescuento=cantlamparitas*Valorlampara;
-
 
 	cantlamparitas=document.getElementById('Cantidad').value;
  	cantlamparitas=parseInt(cantlamparitas);
 
  	marca=document.getElementById('Marca').value;
 
- 	
+ 	precioBruto=cantlamparitas*Valorlampara;
  	
 	if (cantlamparitas>5) 
  	{
@@ -37,10 +35,10 @@ function CalcularPrecio ()
  		
  	}else
  	{   
- 		if (cantlamparitas=5) 
+ 		if (cantlamparitas==5) 
 		{ 
 											//NO PONGO LAS CUENTAS EN CADA UNO PORQUE SIEMPRE SON LAS MISMAS, DONDE CAMBIA SOLO ES EN EL VALOR DEL DESCUENTO, ENTONCES PONGO LA CUENTA DEL DESCUENTO AFUERA Y ESTABLEZCO EL DESCUENTO EN CADA UNO Y YA ESTA.
-			if (marca="ArgentinaLuz") 
+			if (marca=="ArgentinaLuz") 
 			{
 				descuento=40;
  	
@@ -51,9 +49,9 @@ function CalcularPrecio ()
  		}
  		else 
  		{
- 		  if (cantlamparitas=4) 
+ 		  if (cantlamparitas==4) 
 		   {
-				if (marca="ArgentinaLuz"||"FelipeLamparas") 
+				if (marca=="ArgentinaLuz"|| marca=="FelipeLamparas")
 				{
 					descuento=25;
 				
@@ -65,14 +63,14 @@ function CalcularPrecio ()
 		   }
 		   else
  		    {
- 				if (cantlamparitas=3) 
+ 				if (cantlamparitas==3) 
 				{
-					if (marca="ArgentinaLuz") 
+					if (marca=="ArgentinaLuz") 
 					{
 						descuento=15;
 					}else
 						{
-							if (marca="FelipeLamparas") 
+							if (marca=="FelipeLamparas") 
 							{
 								descuento=10;
 					
@@ -82,17 +80,18 @@ function CalcularPrecio ()
 							}
 						}
 				}
+ 				else
+ 				{
+ 					descuento=0;
+ 				}
  			
  			}
- 			else
- 			{
- 				descuento=0;
- 			}
+ 				
 		}
  	}
 
 	
- 	preciofinal=preciosindecuento - preciosindecuento*(descuento/100);
+ 	preciofinal=precioBruto-(precioBruto*(descuento/100));
 	document.getElementById('precioDescuento').value = preciofinal;
 
  	
