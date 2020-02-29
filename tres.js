@@ -84,7 +84,7 @@ function mostrar()
 				if (kilosPorBolsa<minimoKilos) 
 				{
 					minimoKilos=kilosPorBolsa;
-					marcaMinimoKilos=marcaMinimoKilos;
+					marcaMinimoKilos=marca;
 					importeMinimoKilos=importePorBolsa;
 				}
 			}
@@ -108,13 +108,20 @@ function mostrar()
 		
 		contador++;
 		sumaKilos=sumaKilos+(cantidadDeBolsas*kilosPorBolsa);
-		respuesta=confirm("Haga click en Aceptar para continuar");			
+		respuesta=confirm("Haga click en Aceptar para continuar");
+		
+		if(sumaKilos == 1000)
+		{
+			break;
+		}
+
+					
 			
 	}
 
 	document.write("La marca que tiene mas kilos en el contenedor es: "+marcaMasKilos+ "<br>");
 	document.write("La marca que tiene mas bolsas de alimento en el contenedor es: "+marcaMasBolsas+ "<br>");
-	document.write("La marca que tiene el mayor importe or bolsa es: "+marcaBolsaMasCara+ "<br>");
+	document.write("La marca que tiene el mayor importe por bolsa es: "+marcaBolsaMasCara+ "<br>");
 	document.write("El importe de la bolsa menos pesada es "+importeMinimoKilos+" y su marca es "+marcaMinimoKilos+ "<br>");
 
 
